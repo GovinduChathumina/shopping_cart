@@ -5,9 +5,9 @@ import ProductDataService from "../services/ProductService";
 const Product = (props) => {
   const initialProductState = {
     id: null,
-    title: "",
+    title      : "",
     description: "",
-    published: false
+    published  : false
   };
   const [currentProduct, setCurrentProduct] = useState(initialProductState);
   const [message, setMessage] = useState("");
@@ -31,10 +31,10 @@ const Product = (props) => {
   };
   const updateStatus = status => {
     const data = {
-      id: currentProduct.id,
-      title: currentProduct.title,
+      id         : currentProduct.id,
+      title      : currentProduct.title,
       description: currentProduct.description,
-      published: status
+      published  : status
     };
     dispatch(updateProduct(currentProduct.id, data))
       .then(response => {
